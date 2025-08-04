@@ -42,6 +42,7 @@ const entries = [
   ['TRG', 'America/Toronto'],
   ['BOZOLORD', 'America/New_York'],
   ['FLAME', 'America/Chicago'],
+  ['PNWB', 'America/New_York'],
 ];
 
 // Format all time zones for "!times" or "!timezones"

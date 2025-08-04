@@ -87,7 +87,7 @@ client.on('messageCreate', (message) => {
     const match = entries.find(([name]) => name === regionInput);
 
     if (!match) {
-      message.channel.send(`❌ Unknown region: ${regionInput}`);
+      message.channel.send(`❌ Unknown Region or Member: ${regionInput}`);
     } else {
       const [name, zone] = match;
       const time = moment().tz(zone).format('hh:mm A');

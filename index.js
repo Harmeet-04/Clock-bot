@@ -42,7 +42,7 @@ const entries = [
   ['TRG', 'America/Toronto'],
   ['BOZO', 'America/New_York'],
   ['FLAME', 'America/Chicago'],
-  ['PNWB', 'America/New_York'],
+  ['PNBW', 'America/New_York'],
   ['ROCKET', 'America/Toronto'],
   ['VAYZEN', 'America/Toronto'],
 ];

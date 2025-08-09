@@ -10,7 +10,7 @@ function handlehelpCommands(message) {
             "`!poke [@user(s)]` - Poke one or more users\n" +
             "`!love [@user(s)]` - Send love to one or more users\n" +
             "`!server` - Show server info\n" +
-            "`!time <region>` - Show time for a specific region\n"
+            "`!time <region / member>` - Show time for a specific region or member\n"
         );
     }
 }

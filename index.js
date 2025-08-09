@@ -1,5 +1,7 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
+const express = require('express');
+const app = express();
 
 // Import feature handlers
 const { handleTimezonesCommand } = require('./features/clock');
@@ -33,3 +35,6 @@ client.on('messageCreate', async (message) => {
 });
 
 client.login(process.env.DISCORD_TOKEN);
+
+app.get('/', (req, res) => res.send('Bot is alive!'));
+app.listen(3000, () => console.log('Uptime web server running'));

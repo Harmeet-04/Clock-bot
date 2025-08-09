@@ -97,14 +97,6 @@ function handleTimezonesCommand(message) {
             message.channel.send(`**${name}** time: ${time} (${zone})`);
             return;
         }
-
-        // Group match (e.g., "europe", "india")
-        const groupTimes = getGroupTimes(input);
-        if (groupTimes) {
-            message.channel.send(groupTimes);
-        } else {
-            message.channel.send(`❌ No timezones found for \`${input}\``);
-        }
     }
 }
 

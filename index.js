@@ -73,7 +73,18 @@ setInterval(() => {
 }, 5 * 60 * 1000);
 
 // Login
-client.login(process.env.DISCORD_TOKEN);
+// Login
+if (!process.env.DISCORD_TOKEN) {
+    console.error("❌ DISCORD_TOKEN is missing! Check Render environment variables.");
+    process.exit(1);
+}
+
+client.login(process.env.DISCORD_TOKEN)
+    .then(() => console.log("✅ Bot login successful!"))
+    .catch(err => {
+        console.error("❌ Failed to login:", err);
+        process.exit(1);
+    });
 
 // UptimeRobot ping route
 app.get('/', (req, res) => res.send('Bot is alive!'));

@@ -36,14 +36,30 @@ client.on('shardError', (error, shardId) => {
 
 // Message handler
 client.on('messageCreate', async (message) => {
+    console.log(`📩 Received message: "${message.content}" from ${message.author.tag}`);
+
+    // If bot or DM, ignore
     if (message.author.bot || !message.guild) return;
 
-    const content = message.content.trim();
+    try {
+        handlehelpCommands(message);
+    } catch (err) {
+        console.error("❌ Help command error:", err);
+    }
 
-    handlehelpCommands(message);
-    handleTimezonesCommand(message);
-    handleFunCommands(message);
+    try {
+        handleTimezonesCommand(message);
+    } catch (err) {
+        console.error("❌ Clock command error:", err);
+    }
+
+    try {
+        handleFunCommands(message);
+    } catch (err) {
+        console.error("❌ Fun command error:", err);
+    }
 });
+
 
 // Force daily restart to keep connection fresh
 setInterval(() => {

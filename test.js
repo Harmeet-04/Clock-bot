@@ -23,6 +23,9 @@ client.on('messageCreate', message => {
     message.reply("✅ I received your message!");
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN)
+  .then(() => console.log("✅ Bot logged in"))
+  .catch(err => console.error("❌ Login failed:", err));
+
 app.get('/', (req, res) => res.send('Bot is alive!'));
 app.listen(3000, () => console.log('🌐 Uptime web server running'));

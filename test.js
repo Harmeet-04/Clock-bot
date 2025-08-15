@@ -22,3 +22,4 @@ client.on('messageCreate', message => {
 });
 
 client.login(process.env.DISCORD_TOKEN);
+app.listen(3000, () => console.log('🌐 Uptime web server running'));

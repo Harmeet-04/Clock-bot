@@ -35,7 +35,6 @@ const entries = [
   ['BOZO', 'America/New_York'],
   ['FLAME', 'America/Chicago'],
   ['PNBW', 'America/New_York'],
-  ['ROCKET', 'America/Toronto'],
   ['VAYZEN', 'America/Toronto'],
 ];
 

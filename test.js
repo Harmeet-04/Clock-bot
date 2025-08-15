@@ -1,6 +1,8 @@
 // test-bot.js
 const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
+const express = require('express');
+const app = express();
 
 // Create client with required intents
 const client = new Client({
@@ -22,4 +24,5 @@ client.on('messageCreate', message => {
 });
 
 client.login(process.env.DISCORD_TOKEN);
+app.get('/', (req, res) => res.send('Bot is alive!'));
 app.listen(3000, () => console.log('🌐 Uptime web server running'));

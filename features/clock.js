@@ -2,40 +2,40 @@ const moment = require('moment-timezone');
 
 // List of region codes and time zones
 const entries = [
-  ['ASIA', 'Asia/Kolkata'],
-  ['EU', 'Europe/Berlin'],
-  ['UK', 'Europe/London'],
-  ['NYC', 'America/New_York'],
-  ['LA', 'America/Los_Angeles'],
-  ['CHICAGO', 'America/Chicago'],
-  ['TORONTO', 'America/Toronto'],
-  ['VANCOUVER', 'America/Vancouver'],
+    ['ASIA', 'Asia/Kolkata'],
+    ['EU', 'Europe/Berlin'],
+    ['UK', 'Europe/London'],
+    ['NYC', 'America/New_York'],
+    ['LA', 'America/Los_Angeles'],
+    ['CHICAGO', 'America/Chicago'],
+    ['TORONTO', 'America/Toronto'],
+    ['VANCOUVER', 'America/Vancouver'],
 
-  // India
-  ['INNOCENT', 'Asia/Kolkata'],
-  ['MAYON', 'Asia/Kolkata'],
-  ['KREJIL', 'Asia/Kolkata'],
-  ['INFERNIUS', 'Asia/Kolkata'],
-  ['PHANTOM', 'Asia/Kolkata'],
-  ['PLURK', 'Asia/Kolkata'],
-  ['VANSH', 'Asia/Kolkata'],
-  ['DANA', 'Asia/Kolkata'],
-  ['GLITCH', 'Asia/Kolkata'],
-  ['CHROME', 'Asia/Kolkata'],
-  ['FATHOMICS', 'Asia/Kolkata'],
-  ['WEI', 'Asia/Kolkata'],
+    // India
+    ['INNOCENT', 'Asia/Kolkata'],
+    ['MAYON', 'Asia/Kolkata'],
+    ['KREJIL', 'Asia/Kolkata'],
+    ['INFERNIUS', 'Asia/Kolkata'],
+    ['PHANTOM', 'Asia/Kolkata'],
+    ['PLURK', 'Asia/Kolkata'],
+    ['VANSH', 'Asia/Kolkata'],
+    ['DANA', 'Asia/Kolkata'],
+    ['GLITCH', 'Asia/Kolkata'],
+    ['CHROME', 'Asia/Kolkata'],
+    ['FATHOMICS', 'Asia/Kolkata'],
+    ['WEI', 'Asia/Kolkata'],
 
-  // Europe
-  ['15', 'Europe/London'],
-  ['NEON', 'Europe/Amsterdam'],
-  ['NANACHI', 'Europe/Brussels'],
-  
-  // America
-  ['TRG', 'America/Toronto'],
-  ['BOZO', 'America/New_York'],
-  ['FLAME', 'America/Chicago'],
-  ['PNBW', 'America/New_York'],
-  ['VAYZEN', 'America/Toronto'],
+    // Europe
+    ['15', 'Europe/London'],
+    ['NEON', 'Europe/Amsterdam'],
+    ['NANACHI', 'Europe/Brussels'],
+
+    // America
+    ['TRG', 'America/Toronto'],
+    ['BOZO', 'America/New_York'],
+    ['FLAME', 'America/Chicago'],
+    ['PNBW', 'America/New_York'],
+    ['VAYZEN', 'America/Toronto'],
 ];
 
 // 🔧 Get time string
@@ -61,16 +61,15 @@ function handleTimezonesCommand(message) {
     // !timezones
     if (content === '!timezones') {
         const isMod = message.member.roles.cache.some(r => r.name === "Moderator"); // role-based
-
+    
         if (!isMod) {
-            message.reply("⛔ You don't have permission to use `!timezones`.");
+            message.reply("⛔ You don’t have permission to use `!timezones`.");
             return;
         }
-
         message.channel.send(getTimes());
         return;
     }
-
+    
     // !time
     if (content.startsWith('!time')) {
         const parts = content.split(' ');

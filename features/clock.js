@@ -54,31 +54,24 @@ function getTimes() {
     return msg;
 }
 
-// 🔧 Show filtered times
-function getGroupTimes(group) {
-    const filtered = entries.filter(([_, zone]) =>
-        zone.toLowerCase().includes(group.toLowerCase())
-    );
-
-    if (filtered.length === 0) return null;
-
-    let msg = `\`\`\`Times for: ${group.toUpperCase()}\n\n`;
-    for (const [name, zone] of filtered) {
-        msg += formatTime(name, zone) + '\n';
-    }
-    msg += '```';
-    return msg;
-}
-
 // 📦 Main handler
 function handleTimezonesCommand(message) {
     const content = message.content.trim().toLowerCase();
 
+    // !timezones
     if (content === '!timezones') {
+        const isMod = message.member.roles.cache.some(r => r.name === "Moderator"); // role-based
+
+        if (!isMod) {
+            message.reply("⛔ You don't have permission to use `!timezones`.");
+            return;
+        }
+
         message.channel.send(getTimes());
         return;
     }
 
+    // !time
     if (content.startsWith('!time')) {
         const parts = content.split(' ');
         if (parts.length === 1) {
@@ -88,7 +81,7 @@ function handleTimezonesCommand(message) {
 
         const input = parts[1].toUpperCase();
 
-        // Exact region name match
+        // Exact region/name match
         const match = entries.find(([name]) => name === input);
         if (match) {
             const [name, zone] = match;

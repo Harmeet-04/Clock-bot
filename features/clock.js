@@ -22,13 +22,12 @@ const entries = [
     ['DANA', 'Asia/Kolkata'],
     ['GLITCH', 'Asia/Kolkata'],
     ['CHROME', 'Asia/Kolkata'],
-    ['FATHOMICS', 'Asia/Kolkata'],
-    ['WEI', 'Asia/Kolkata'],
+    ['Malovent', 'Asia/Kolkata'],
 
     // Europe
     ['15', 'Europe/London'],
     ['NEON', 'Europe/Amsterdam'],
-    ['NANACHI', 'Europe/Brussels'],
+    // ['NANACHI', 'Europe/Brussels'],
 
     // America
     ['TRG', 'America/Toronto'],

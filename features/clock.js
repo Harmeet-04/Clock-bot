@@ -34,7 +34,7 @@ const entries = [
     ['BOZO', 'America/New_York'],
     ['FLAME', 'America/Chicago'],
     ['PNBW', 'America/New_York'],
-    ['VAYZEN', 'America/Toronto'],
+    ['VAYZEN', 'America/Edmonton'],
 ];
 
 // 🔧 Get time string

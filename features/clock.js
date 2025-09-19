@@ -3,6 +3,7 @@ const moment = require('moment-timezone');
 // List of region codes and time zones
 const entries = [
     ['ASIA', 'Asia/Kolkata'],
+    ['INDIA', 'Asia/Kolkata'],
     ['EU', 'Europe/Berlin'],
     ['UK', 'Europe/London'],
     ['NYC', 'America/New_York'],
@@ -19,15 +20,13 @@ const entries = [
     ['PHANTOM', 'Asia/Kolkata'],
     ['PLURK', 'Asia/Kolkata'],
     ['VANSH', 'Asia/Kolkata'],
-    ['DANA', 'Asia/Kolkata'],
-    ['GLITCH', 'Asia/Kolkata'],
     ['CHROME', 'Asia/Kolkata'],
     ['Malovent', 'Asia/Kolkata'],
+    ['SAPPHIRE', 'Asia/Kolkata'],
 
     // Europe
     ['15', 'Europe/London'],
     ['NEON', 'Europe/Amsterdam'],
-    // ['NANACHI', 'Europe/Brussels'],
 
     // America
     ['TRG', 'America/Toronto'],

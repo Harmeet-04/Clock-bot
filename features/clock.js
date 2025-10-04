@@ -20,9 +20,10 @@ const entries = [
     ['PHANTOM', 'Asia/Kolkata'],
     ['PLURK', 'Asia/Kolkata'],
     ['VANSH', 'Asia/Kolkata'],
-    ['CHROME', 'Asia/Kolkata'],
-    ['Malovent', 'Asia/Kolkata'],
-    ['SAPPHIRE', 'Asia/Kolkata'],
+    ['MALOVENT', 'Asia/Kolkata'],
+
+    //Asia
+    ['MINHZI', 'Asia/Ho_Chi_Minh'],
 
     // Europe
     ['15', 'Europe/London'],
